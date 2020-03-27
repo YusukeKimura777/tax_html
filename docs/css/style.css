@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul, ol {
   list-style: none;
 }
 
@@ -64,7 +64,7 @@ header p:before {
 }
 
 .home {
-  margin-top: 23.4375vw;
+  margin-top: 244px;
 }
 
 .home h1 {
@@ -142,17 +142,13 @@ header p:before {
   border-radius: 35px;
 }
 
-.diagnosis-result-detail {
-  width: 100%;
-}
-
-.diagnosis-result-detail strong {
+.diagnosis-result strong {
   display: block;
   text-align: center;
   font-size: 80px;
 }
 
-.diagnosis-result-detail strong:after {
+.diagnosis-result strong:after {
   content: '';
   display: block;
   width: 85%;
@@ -164,7 +160,7 @@ header p:before {
   background-repeat: no-repeat;
 }
 
-.diagnosis-result-detail p {
+.diagnosis-result p {
   margin: 52px 0 0 0;
   font-size: 24px;
 }
@@ -186,13 +182,13 @@ header p:before {
   .diagnosis-result {
     border-width: 5px;
   }
-  .diagnosis-result-detail strong {
+  .diagnosis-result strong {
     font-size: 40px;
   }
-  .diagnosis-result-detail strong:after {
+  .diagnosis-result strong:after {
     height: 8px;
   }
-  .diagnosis-result-detail p {
+  .diagnosis-result p {
     margin: 32px 0 0 0;
     font-size: 18px;
   }
@@ -223,26 +219,25 @@ header p:before {
   margin-top: 5.78125vw;
 }
 
-.outline-content p {
+.outline-content ol {
   margin: 0;
+  padding: 0;
+}
+
+.outline-content li {
   font-size: 24px;
 }
 
-.outline-content p:last-child {
-  margin: 0 10% 0 10%;
-}
-
-.outline-content-2 {
+.outline-content li:nth-of-type(2) {
   text-align: right;
 }
 
-.outline-content-3 {
-  margin-left: 2.5%;
+.outline-content li:nth-of-type(3) {
   display: flex;
   align-items: center;
 }
 
-.outline-content-3:before {
+.outline-content li:nth-of-type(3):before {
   content: '';
   display: inline-block;
   background-image: url(../img/yen_24_1.png);
@@ -253,18 +248,19 @@ header p:before {
   margin-right: 2.5%;
 }
 
-.outline-content-4 {
+.outline-content li:nth-of-type(4) {
   text-align: right;
   padding-right: 5%;
 }
 
-.outline-content-5 {
+.outline-content li:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 10% 0 10%;
 }
 
-.outline-content-5:after {
+.outline-content li:last-child:after {
   content: '';
   display: inline-block;
   background-image: url(../img/yen_24_2.png);
@@ -282,6 +278,30 @@ header p:before {
     padding-left: 0;
     font-size: 18px;
     text-align: center;
+  }
+  .outline-content li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .outline-content li:nth-of-type(2) {
+    text-align: center;
+  }
+  .outline-content li:nth-of-type(3) {
+    display: block;
+  }
+  .outline-content li:nth-of-type(3):before {
+    content: none;
+  }
+  .outline-content li:nth-of-type(4) {
+    padding-right: 0;
+    text-align: center;
+  }
+  .outline-content li:last-child {
+    display: block;
+  }
+  .outline-content li:last-child:after {
+    content: none;
   }
   .outline-content p {
     margin-bottom: 10px;
@@ -349,6 +369,7 @@ header p:before {
 .book-detail img {
   box-shadow: 9px -9px #000000;
   margin-right: 50px;
+  width: 330px;
 }
 
 .book-detail figcaption {
